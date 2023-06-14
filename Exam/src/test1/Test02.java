@@ -36,7 +36,7 @@ public class Test02 {
 		
 		System.out.printf("%s님 안녕하세요. \n당신은 올해 만 %d세 입니다.", name, age);
 		
-		sc.close();
+		sc.close();  //sc변수로 잡혀있는 메모리 공간을 닫아주기 위해. 닫지 않으면 
 		
 		
 		
