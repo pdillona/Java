@@ -11,6 +11,7 @@ package test2;
 public class Test07 {
 
 	public static void main(String[] args) {
+		
 		System.out.println("   1과 5의   최대공약수 : " + gcd(1, 5) );
 		System.out.println("   3과 5의   최대공약수 : " + gcd(3, 6) );
 		System.out.println("  12와 18의  최대공약수 : " + gcd(12, 18) );

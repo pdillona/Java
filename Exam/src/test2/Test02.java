@@ -23,8 +23,9 @@ public class Test02 {
 				
 				maxNum = arr[i];
 				
+				
 			}
-			
+		
 		}
 		System.out.println("배열 arr에서 가장 큰 수 : " + maxNum);
 		

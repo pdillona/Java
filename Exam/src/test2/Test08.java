@@ -23,6 +23,6 @@ public class Test08 {
 			return 1;
 		}
 		
-		return n*factorial(n-1);
-	}
+		return n * factorial(n-1);
+	}//recursive (재귀함수) 일종의 반복문 리턴으로 다시 팩토리올 함수 부르고 다시 리턴 ~~이 되니까
 }

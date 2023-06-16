@@ -27,13 +27,14 @@ public class Test04 {
 		for (int i=0; i<4; i++) {
 			
 			for(int j = i+1; j<5; j++) {
-				 //System.out.println(arr[1]);
-				 //System.out.println(arr[2]);
+				 //System.out.print(arr[1]);
+				 
+				 //System.out.print(arr[0]);
 				if(arr[i] > arr[j]) {
 					
 					int temp =arr[j];
 					
-					arr[j] = arr[i];
+					arr[j] = arr[i]; // 이 라인에서 배열 변경 일어남
 					
 					arr[i] = temp;
 					

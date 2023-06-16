@@ -26,7 +26,7 @@ public class Test01 {
 			
 			System.out.print("\n");
 		}
-		
+		System.out.println(str[0]);
 		
 
 	}

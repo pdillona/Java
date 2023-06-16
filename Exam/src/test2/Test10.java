@@ -24,7 +24,7 @@ public class Test10 {
 			return n;
 		}
 		
-		return fibo() + fibo();
+		return fibo(n-1) + fibo(n-2);
 	}
 
 }
