@@ -34,6 +34,7 @@ public class Account {
 	public void withdraw(int money) {
 		this.balance -= money;
 	}
+	
 	public void show() {
 		System.out.println("--------------------------");
 		System.out.println("은행명: " + this.bank);

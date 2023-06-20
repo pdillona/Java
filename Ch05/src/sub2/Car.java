@@ -7,9 +7,10 @@ public class Car {
 	private	int		speed;
 	
 	
-	//생성자 생성자란? : 클래스 이름과 동일한 메서드
-	//생성자란 캡슐화된 속성을 초기화 하기 위한 메서드
-	public Car(String name, String color, int speed) {  //private시 여기서 초기화를 해준다.  //필드와 동일한 매개변수 선언해 준다. //메서드 이름인데 대문자로 사용된다.
+	// 생성자 생성자란? : 클래스 이름과 동일한 메서드
+	// 생성자란 캡슐화된 속성을 초기화 하기 위한 메서드
+	// 생성자는 클래스와 동일한 이름을 가지고 있으며, 객체가 생성될 때 자동으로 호출됩니다.
+	public Car(String name, String color, int speed) {  // private시 여기서 초기화를 해준다.  // 필드와 동일한 매개변수 선언해 준다. // 메서드 이름인데 대문자로 사용된다.
 		
 		this.name  = name;
 		this.color = color;
