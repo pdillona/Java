@@ -8,6 +8,7 @@ public class Account {
 	protected	int		balance;
 	
 	public Account(String bank, String id, String name, int balance) {
+		
 		this.balance = balance;
 		this.bank	= bank;
 		this.id 	= id;

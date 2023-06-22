@@ -3,9 +3,9 @@ package sub5;
 public class StockAcccount extends Account {
 
 	
-	private String stock;
-	private int amount;
-	private int price;
+	private String 	stock;
+	private int 	amount;
+	private int 	price;
 	
 	public StockAcccount(String bank, String id, String name, int balance, String stock, int amount, int price) {
 		
