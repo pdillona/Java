@@ -1,4 +1,4 @@
-package step3;
+package test3;
 /*
 날짜 : 2023/06/23
 이름 : 정영재
@@ -6,7 +6,7 @@ package step3;
 
 */
 
-public class Test09 {
+public class Test10 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

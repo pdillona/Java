@@ -1,4 +1,4 @@
-package step3;
+package test3;
 
 /*
 	날짜 : 2023/06/23
