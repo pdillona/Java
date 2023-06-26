@@ -42,6 +42,7 @@ public void surf() {
 }
 
 
+
 interface Internet{
 	public void access();
 	
