@@ -44,6 +44,9 @@ public class Test05 {
 		Vehicle avante = factory.createCar("아반테", 2500);
 		Vehicle sonata = factory.createCar("소나타", 3000);
 
+
+		
+		
 		avante.info();
 		sonata.info();
 	}	
