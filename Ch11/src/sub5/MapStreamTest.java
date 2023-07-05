@@ -9,6 +9,10 @@ import java.util.List;
 이름 : 정영재
 내용 : JAVA 스트림 매핑 실습
 
+맵 스트림
+	- 스트림 요소(컬렉션 원소)를 다른 요소로 변환 시키는 스트림
+	- map(), flatMap() 등 
+
 */
 public class MapStreamTest {
 
@@ -36,6 +40,8 @@ public class MapStreamTest {
 		
 		
 		System.out.println();
+
+		
 		//flatMapToInt
 		int result = list.stream().flatMapToInt((str)->{
 			String[] strArr = str.split(",");
@@ -51,6 +57,19 @@ public class MapStreamTest {
 		}).sum();
 		
 		System.out.println(result);
+		
+		
+		int a = 180;
+		byte b = (byte)a;
+		
+		System.out.println(a);
+		System.out.println(b);
+		
+		
+		int a1 = 50;
+		double b1 = 20.5;
+		double rs = a1+b1; 
+		System.out.println(rs);
 		
 	}
 
