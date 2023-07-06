@@ -15,7 +15,8 @@ public class MethodOverloadTest {
 		int a = plus(97);
 		int s = plus(415,67);
 		double d = plus(1.23,6.24);
-		String c = plus("정신 ", "나갈 것 같애");
+		String c = plus("Method ", "OverLoading");
+		
 		
 		System.out.println("a값은:" + a + " 입니다.");
 		System.out.println("s값은:" + s + " 입니다.");
