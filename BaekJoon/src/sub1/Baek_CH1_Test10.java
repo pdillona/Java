@@ -28,15 +28,13 @@ class Add{
     }
     
 	
-
-    
-	
 }
 
 
 
 
-public class Test10 {
+
+public class Baek_CH1_Test10 {
 
 	public static void main(String[] args) {
 
@@ -47,6 +45,8 @@ public class Test10 {
 
 		Add a1 = new Add();
 	
+		//제출 시에는 결과 값이 정확히 동일해야 한다.
+		//50번 라인같은 text조차 출력되어선 안된다.
 		System.out.println("첫 번째 값을 입력하세요: ");
 		int r1 = sc.nextInt();
 		
@@ -55,32 +55,28 @@ public class Test10 {
 		
 		int[] p1 = a1.splitIntoDigits(r2);
 		
-		System.out.println(p1.length);
-		System.out.println(p1[1]);
+	
+		//System.out.println(p1[0]);
+		//System.out.println(p1.length);
 		
 
+		int l1 = p1.length;
 		
+		//System.out.println(r2);
 		
-		System.out.println(r2);
-		
-		for(i=0; p1[i]==p1.length; i++) {
+		for(int i = l1-1; i >= 0; i--) {
 			
-			
+			System.out.println(p1[i] *= r1);
 			
 		}
 		
 	
-		
+		sc.close();
 		System.out.println(a1.add(r1, r2));
-		
-
-		
-
 		
 		
 		
 	}
-
 
 
 }
