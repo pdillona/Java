@@ -8,6 +8,25 @@ public class OrderVO {
 	private int orderCount;
 	private String orderDate;
 	
+	//조인 추가필드
+	
+	private String name  ;
+	private String prodName;
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getProdName() {
+		return prodName;
+	}
+	public void setProdName(String prodName) {
+		this.prodName = prodName;
+	}
+	
 	
 	
 		
@@ -43,7 +62,11 @@ public class OrderVO {
 	}
 	
 	
+	@Override
+	public String toString() {
 	
+		return orderNo + "," + name  + "," + prodName + "," + orderId + "," + orderCount + "," + orderDate;
+	}
 	
 	
 	

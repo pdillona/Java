@@ -3,15 +3,18 @@ package com.shop.vo;
 public class ProductVO {
 	
 	private int prodNo;
-	private int cateNo;
-	private int sellerNo;
 	private String prodName;
-	private int prodPrice;
-	private int prodStock;
-	private int prodSold;
-	private int prodDiscount;
+	private int Price;
+	private int Stock;
+	private String company;
 	
 	
+	public String getCompany() {
+		return company;
+	}
+	public void setCompany(String company) {
+		this.company = company;
+	}
 	
 	public int getProdNo() {
 		return prodNo;
@@ -19,50 +22,32 @@ public class ProductVO {
 	public void setProdNo(int prodNo) {
 		this.prodNo = prodNo;
 	}
-	public int getCateNo() {
-		return cateNo;
-	}
-	public void setCateNo(int cateNo) {
-		this.cateNo = cateNo;
-	}
-	public int getSellerNo() {
-		return sellerNo;
-	}
-	public void setSellerNo(int sellerNo) {
-		this.sellerNo = sellerNo;
-	}
+	
 	public String getProdName() {
 		return prodName;
 	}
 	public void setProdName(String prodName) {
 		this.prodName = prodName;
 	}
-	public int getProdPrice() {
-		return prodPrice;
+	public int getPrice() {
+		return Price;
 	}
-	public void setProdPrice(int prodPrice) {
-		this.prodPrice = prodPrice;
+	public void setPrice(int Price) {
+		this.Price = Price;
 	}
-	public int getProdStock() {
-		return prodStock;
+	public int getStock() {
+		return Stock;
 	}
-	public void setProdStock(int prodStock) {
-		this.prodStock = prodStock;
-	}
-	public int getProdSold() {
-		return prodSold;
-	}
-	public void setProdSold(int prodSold) {
-		this.prodSold = prodSold;
-	}
-	public int getProdDiscount() {
-		return prodDiscount;
-	}
-	public void setProdDiscount(int prodDiscount) {
-		this.prodDiscount = prodDiscount;
+	public void setStock(int Stock) {
+		this.Stock = Stock;
 	}
 	
+	
 
+	@Override
+	public String toString() {
+		return prodNo +","+ prodName +","+ Stock +","+ Price +","+ company;
+	}
 	
 	
 	
