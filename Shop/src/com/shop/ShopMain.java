@@ -107,6 +107,7 @@ public class ShopMain {
 				}
 				
 				}else {
+					
 					// 주문현황
 					String orderId = loginedCustomer.getCustId();
 					List<OrderVO> myOrders = orderDAO.selectOrders(orderId);

@@ -94,7 +94,7 @@ public class ProductDAO extends DBHelper{
 		try {
 			
 			conn = getConnection();
-			stmt = conn.prepareStatement(SQL.update_product_stock_count);
+			psmt = conn.prepareStatement(SQL.update_product_stock_count);
 			psmt.setInt(1, prodCount);
 			psmt.setInt(2, prodNo);
 			
