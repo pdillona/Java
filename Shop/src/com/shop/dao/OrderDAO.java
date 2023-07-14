@@ -62,7 +62,7 @@ public class OrderDAO extends DBHelper{
 				vo.setOrderId(rs.getString(2));
 				vo.setOrderProduct(rs.getInt(3));
 				vo.setOrderCount(rs.getInt(4));
-				vo.setOrderDate(rs.getString(5).substring(0, 15));  //sql은 1부터 자바는 0부터 subString의 순서 차이
+				vo.setOrderDate(rs.getString(5).substring(0, 16));  //sql은 1부터 자바는 0부터 subString의 순서 차이
 				vo.setName(rs.getString(6));
 				vo.setProdName(rs.getString(7));
 				
