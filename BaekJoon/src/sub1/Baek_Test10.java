@@ -34,7 +34,7 @@ class Add{
 
 
 
-public class Baek_CH1_Test10 {
+public class Baek_Test10 {
 
 	public static void main(String[] args) {
 
