@@ -2,24 +2,60 @@ package sub1;
 
 import java.util.Scanner;
 
+
+
+class comp{
+	
+
+	
+	long compair(long a) {
+		
+		
+		
+		
+		while(true) {
+			
+			
+			
+			if(0< a && a<= Math.pow(10, 12)) {
+				
+				break;
+				
+			}else {
+				
+				continue;
+				
+			}
+			
+			
+		}
+		
+		return a;
+	}
+	
+}
+
+
+
 public class Baek_Test11 {
 
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("");
-		
-		int a = sc.nextInt();
-		int b = sc.nextInt();
-		int c = sc.nextInt();
+		comp c = new comp();
 		
 		
-		while(0>a && a>10*12) {
-			
-			
-		}
+		
+		long aa = sc.nextLong();
+		long bb = sc.nextLong();
+		long cc = sc.nextLong();
+				
 
+		
+		long rs = aa + bb + cc;
+		System.out.println(rs);
 		
 	}
 }
+
