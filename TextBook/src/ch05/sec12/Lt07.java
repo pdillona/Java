@@ -11,7 +11,7 @@ public class Lt07 {
 			
 			for(int k = 0; k < array.length; k++) {
 				
-				if(array[i]) {
+				if(array[i]>1) {
 				
 				}
 			}

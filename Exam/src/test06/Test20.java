@@ -38,20 +38,25 @@ class BankAccount {
 		this.balance = balance;
 	}
 
+	
 	@Override
 	public String toString() {
 		return id + "\t" + name + "\t" + balance;
 	}
 }
 
+
+
 public class Test20 {
+	
+	
 	public static void main(String[] args) {
 		// 20번
+			
 		Scanner sc = new Scanner(System.in);
-
+		
 		BankAccount[] accounts = new BankAccount[100];
 
-		
 
 		while (true) {
 			System.out.println("--------------------------------------------------------------");
@@ -65,30 +70,41 @@ public class Test20 {
 				break;
 			} else if (answer == 1) {
 
-				System.out.println("------------");
-				System.out.println("계좌생성");
-				System.out.println("------------");
+			    System.out.println("------------");
+			    System.out.println("계좌생성");
+			    System.out.println("------------");
 
-				System.out.print("계좌번호 : ");
-				String id = sc.next();
+			    System.out.print("계좌번호 : ");
+			    String id = sc.next();
 
-				System.out.print("계좌주 : ");
-				String name = sc.next();
+			    // 중복된 계좌 번호 체크
+			    boolean DuplicateAccount = false;
+			    
+			    for (BankAccount account : accounts) {
+		        if (account != null && account.getId().equals(id)) {
+			            DuplicateAccount = true;
+			            System.out.println("이미 존재하는 계좌번호입니다. 다른 계좌번호를 입력해주세요.");
+			            break;
+			        }
+			    }
 
-				System.out.print("초기입금액 : ");
-				int balance = sc.nextInt();
+			    if (!DuplicateAccount) {
+			        System.out.print("계좌주 : ");
+			        String name = sc.next();
 
-				BankAccount account = new BankAccount(id, name, balance);
+			        System.out.print("초기입금액 : ");
+			        int balance = sc.nextInt();
 
-				for (int i = 0; i < accounts.length; i++) {
+			        BankAccount account = new BankAccount(id, name, balance);
 
-					if (accounts[i] == null) {
-						accounts[i] = account;
-						System.out.println("결과 : 계좌가 생성되었습니다.");
-						break;
-					}
-				}
-
+			        for (int i = 0; i < accounts.length; i++) {
+			            if (accounts[i] == null) {
+			                accounts[i] = account;
+			                System.out.println("결과 : 계좌가 생성되었습니다.");
+			                break;
+			            }
+			        }
+			    }
 			} else if (answer == 2) {
 
 				System.out.println("------------");
@@ -109,39 +125,37 @@ public class Test20 {
 				System.out.println("ㅣ   예금   ㅣ");
 				System.out.println("------------");
 
-				while (true) {
-					for (int i = 0; i < accounts.length; i++) {
+				
+				System.out.println("계좌 번호를 입력해주세요:");
+				String id = sc.nextLine();
 
-						System.out.println("계좌 번호를 입력해주세요:");
+				boolean accountFound = false;
+				
+				for (int i = 0; i < accounts.length; i++) {
 
-						String id = sc.nextLine();
+					if (accounts[i] != null &&accounts[i].getId().equals(id)) {
+						
+						accountFound = true;
+						
+						System.out.println("계좌에 추가할 금액을 입력해주세요: ");
+						String pb = sc.nextLine();
 
-						if (accounts[i].getId().equals(id)) {
+						int bI = Integer.parseInt(pb);
 
-							System.out.println("계좌에 추가할 금액을 입력해주세요: ");
-							String pb = sc.nextLine();
+						int balance = bI + accounts[i].getBalance();
 
-							int b1 = Integer.parseInt(pb);
+						accounts[i].setBalance(balance);
 
-							int balance = b1 + accounts[i].getBalance();
+						System.out.println(id + " 계좌의 현재잔액: " + accounts[i].getBalance());
 
-							accounts[i].setBalance(balance);
-
-							break;
-
-						} else {
-
-							System.out.println("잘못된 계좌 입니다 다시 입력해주세요");
-
-							break;
-						}
-
-					}
-
-					if (true) {
 						break;
-					}
 
+					}
+				}
+				
+				if(!accountFound) {
+					System.out.println("잘못된 계좌 번호 입니다 다시 입력해 주세요");
+					
 				}
 
 			} else if (answer == 4) {
@@ -150,32 +164,42 @@ public class Test20 {
 				System.out.println("출금");
 				System.out.println("------------");
 
+				System.out.println("계좌 번호를 입력해주세요:");
+				String id = sc.nextLine();
+				
+				boolean accountFound = false;
+				
+
 				for (int i = 0; i < accounts.length; i++) {
 
-					System.out.println("계좌 번호를 입력해주세요:");
+					if (accounts[i] != null && accounts[i].getId().equals(id)) {
 
-					String id = sc.nextLine();
-
-					if (accounts[i].getId().equals(id)) {
-
+						accountFound = true;
+						
 						System.out.println("출금할 금액을 입력해주세요: ");
-						String pb = sc.nextLine();
+						String mb = sc.nextLine();
 
-						int b1 = Integer.parseInt(pb);
+						int bI = Integer.parseInt(mb);
+						
+						if(accounts[i] == null || accounts[i].getBalance() < bI ) {
+							System.out.println("계좌의 잔액이 부족합니다 다시 입력해주세요");
+							break;
+						}else
+						{
 
-						int balance = accounts[i].getBalance() - b1;
+						int balance = accounts[i].getBalance() - bI;
 
 						accounts[i].setBalance(balance);
 
-						System.out.println(accounts[i].getBalance());
+						System.out.println(id + " 계좌의 현재잔액: " + accounts[i].getBalance());
+
 						break;
-
-					} else {
-
-						System.out.println("잘못된 계좌 입니다 다시 입력해주세요");
-						continue;
+						}
 					}
-
+				}
+				if(!accountFound) {
+					System.out.println("잘못된 계좌 번호 입니다 다시 입력해 주세요");
+					
 				}
 
 			}
