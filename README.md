@@ -1,4 +1,3 @@
-
 <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=130&width=500&section=header&text=Java프로그래밍&fontSize=50&fontAlign=21&fontAlignY=33"  />
 
 ---------------------------------------
@@ -6,7 +5,8 @@
 ```
 1.HelloWorld 실습하기
 ```
-
+      1.ㄴㄴㄴ
+      2.ㅇㅇㅇ
    
 ## Ch02.변수와 연산자
 ```
