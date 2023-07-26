@@ -1,5 +1,5 @@
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=130&section=header&text=Java프로그래밍&fontSize=50&fontAlign=21&fontAlignY=33"  />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=130&width=500&section=header&text=Java프로그래밍&fontSize=50&fontAlign=21&fontAlignY=33"  />
 
 ---------------------------------------
 ## Ch01.Java 소개 및 개발 환경 구축
@@ -49,13 +49,19 @@
 
 ## Ch06. 배열과 메서드
 ```
-
+1. 예외처리 실습하기
+2. Throws 실습하기
 
 ```
 
 ## Ch07. 배열과 메서드
 ```
-
+1. Object 클래스
+2. String 클래스
+3. Wrapper 클래스
+4. Object 클래스 실습하기
+5. Data 클래스
+6. 정규표현식 실습하기
 ```
 
 ## Ch08. 배열과 메서드
